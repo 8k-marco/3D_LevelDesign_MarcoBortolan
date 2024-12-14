@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ladder
+  - Coin
+  - Door
+  - Key
   layers:
   - Default
   - TransparentFX

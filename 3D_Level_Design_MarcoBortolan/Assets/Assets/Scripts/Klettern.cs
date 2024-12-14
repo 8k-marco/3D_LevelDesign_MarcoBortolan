@@ -11,7 +11,7 @@ public class Klettern : MonoBehaviour
 
     private void OnTriggerEnter(Collider c)
     {
-        if (c.gameObject.CompareTag("ladder"))
+        if (c.gameObject.CompareTag("Player"))
         {
             clamp = true;
             rb.useGravity = false;
@@ -20,7 +20,7 @@ public class Klettern : MonoBehaviour
 
     private void OnTriggerExit(Collider c)
     {
-       if (c.gameObject.CompareTag("ladder"))
+       if (c.gameObject.CompareTag("Player"))
         {
             clamp = false;
             rb.useGravity = true;
