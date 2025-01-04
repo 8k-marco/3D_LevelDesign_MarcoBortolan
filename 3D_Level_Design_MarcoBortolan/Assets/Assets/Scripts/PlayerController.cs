@@ -4,6 +4,7 @@ public class SimpleThirdPersonMovement : MonoBehaviour
 {
     [Header("Movement")]
     public float movementSpeed = 5f;
+    public float runSpeed = 10f;
     public float jumpForce = 5f;
     private Rigidbody rb;
     private bool isGrounded;
@@ -45,7 +46,7 @@ public class SimpleThirdPersonMovement : MonoBehaviour
             Vector3 moveDirection = Quaternion.LookRotation(cameraForward) * direction;
             rb.MovePosition(transform.position + moveDirection * movementSpeed * Time.deltaTime);
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f); // Smooth rotation
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
             
             animator.SetBool("isMoving", true);
         }
