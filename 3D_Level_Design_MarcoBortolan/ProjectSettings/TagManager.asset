@@ -11,6 +11,21 @@ TagManager:
   - RespawnPoint
   - L1
   - L2
+  - Door2
+  - Door3
+  - Key2
+  - Key3
+  - Key4
+  - Lever1
+  - Lever2
+  - Lever3
+  - Door4
+  - Door5
+  - Door6
+  - Door7
+  - Rope1
+  - Rope2
+  - water
   layers:
   - Default
   - TransparentFX
