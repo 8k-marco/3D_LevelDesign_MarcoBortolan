@@ -2,4 +2,4 @@
 
 ## Pictures
 
-## video
+## Video
