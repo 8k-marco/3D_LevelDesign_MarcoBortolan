@@ -1,13 +1,17 @@
 using UnityEngine;
 
-public class SimpleThirdPersonMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float movementSpeed = 5f;
-    public float runSpeed = 10f;
+    public float movementSpeed = 10f;
+    public float runSpeed = 20f;
+
+    [Header("Jump")]
     public float jumpForce = 5f;
     private Rigidbody rb;
-    private bool isGrounded;
+    public bool isGrounded;
+
+    [Header("Camera")]
     public Transform cameraTransform;
     
     [Header("Animation")]
@@ -29,6 +33,7 @@ public class SimpleThirdPersonMovement : MonoBehaviour
     {
         MoveCharacter();
         HandleJump();
+        Run();
     }
 
     void MoveCharacter()
@@ -53,6 +58,18 @@ public class SimpleThirdPersonMovement : MonoBehaviour
         else
         {
             animator.SetBool("isMoving", false);
+        }
+    }
+
+    public void Run()
+    {
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            movementSpeed = runSpeed;
+        }
+        else
+        {
+            movementSpeed = 10f;
         }
     }
 
