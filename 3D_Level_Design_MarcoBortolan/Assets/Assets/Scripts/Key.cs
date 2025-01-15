@@ -39,6 +39,10 @@ public class Key : MonoBehaviour
     //Rope
     [SerializeField] private bool hasRope1;
     [SerializeField] private bool hasRope2;
+    //Switch
+    [SerializeField] private bool hasLever1 = false;
+    [SerializeField] private bool hasLever2 = false;
+    [SerializeField] private bool hasLever3 = false;
 
     private void Start() 
     {
@@ -117,20 +121,19 @@ public class Key : MonoBehaviour
         }
 
         //Lever --> Door
-        if(other.CompareTag("Lever1") && Input.GetKey(KeyCode.F))
+        if(other.CompareTag("Lever1"))
         {
-            door4.SetActive(false);
-            door7.SetActive(false); 
+            hasLever1 = true;
         }
 
-        if(other.CompareTag("Lever2") && Input.GetKey(KeyCode.F))
+        if(other.CompareTag("Lever2"))
         {
-            door5.SetActive(false);
+            hasLever2 = true;
         }
 
-        if(other.CompareTag("Lever3") && Input.GetKey(KeyCode.F))
+        if(other.CompareTag("Lever3"))
         {
-            door6.SetActive(false);
+            hasLever3 = true;
         }
 
         //Ropes --> Waterpegel
@@ -147,6 +150,25 @@ public class Key : MonoBehaviour
         if(hasRope1 && hasRope2)
         {
             water.SetActive(false);   
+        }
+    }
+
+    private void Update() 
+    {
+        if(Input.GetKeyDown(KeyCode.F) && hasLever1)
+        {
+            door4.SetActive(false);
+            door7.SetActive(false); 
+        }
+
+        if(Input.GetKeyDown(KeyCode.F) && hasLever2)
+        {
+            door5.SetActive(false);
+        }
+
+        if(Input.GetKeyDown(KeyCode.F) && hasLever3)
+        {
+            door6.SetActive(false);
         }
     }
 }

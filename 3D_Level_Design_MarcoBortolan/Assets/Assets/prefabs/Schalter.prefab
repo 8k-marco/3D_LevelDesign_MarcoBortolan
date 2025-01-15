@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3582603269190337467}
   - component: {fileID: 7921702832538002718}
   - component: {fileID: 6606309399715700784}
-  - component: {fileID: 2608381882706032703}
-  - component: {fileID: 2652877531737574862}
+  - component: {fileID: 7387906198094848689}
+  - component: {fileID: 6633330101368041670}
   m_Layer: 0
   m_Name: Schalter
   m_TagString: Untagged
@@ -85,7 +85,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2608381882706032703
+--- !u!65 &7387906198094848689
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3488118677646896933}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02781147, y: 0.040678743, z: 0.03168682}
+  m_Center: {x: -0.0005822226, y: -0.00017165118, z: 0.014297676}
+--- !u!65 &6633330101368041670
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,24 +127,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009192072, y: 0.019999994, z: 0.020973716}
   m_Center: {x: 0, y: 6.353003e-17, z: 0.008941055}
---- !u!65 &2652877531737574862
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3488118677646896933}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0144059565, y: 0.024404759, z: 0.020973716}
-  m_Center: {x: 0.00015019128, y: -0.00005394675, z: 0.008941056}

@@ -8,29 +8,27 @@ public class Klettern : MonoBehaviour
     public float clampSpeed;
     public Rigidbody rb;
 
-
-    private void OnTriggerEnter(Collider c)
+    private void OnTriggerEnter(Collider other)
     {
-        if (c.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("ladder"))
         {
             clamp = true;
             rb.useGravity = false;
         }
     }
-
-    private void OnTriggerExit(Collider c)
+    
+    private void OnTriggerExit(Collider other) 
     {
-       if (c.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("ladder"))
         {
             clamp = false;
             rb.useGravity = true;
         } 
     }
 
-
     void Update ()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && clamp)
         {
             transform.position += new Vector3(0, clampSpeed * Time.deltaTime, 0);
         }
