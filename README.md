@@ -1,5 +1,5 @@
 # Shadow of the Titan Final Level
 
-## Pictures
+## Screenshots
 
 ## Video
