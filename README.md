@@ -13,5 +13,5 @@
 ![Boss Arena](https://github.com/user-attachments/assets/9ebc0c26-2b7f-49e3-a728-cde7f71f2701)
 ![Sword Chamber](https://github.com/user-attachments/assets/8aca9a66-9b67-4dce-981f-5ba7173cc101)
 
-## Video
+## Gameplay
 https://github.com/user-attachments/assets/48280ac7-7b97-4c16-8d80-d12c40596689
