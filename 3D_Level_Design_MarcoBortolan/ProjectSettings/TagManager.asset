@@ -26,6 +26,8 @@ TagManager:
   - Rope1
   - Rope2
   - water
+  - KeyF
+  - Option
   layers:
   - Default
   - TransparentFX
